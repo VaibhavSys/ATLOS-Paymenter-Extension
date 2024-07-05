@@ -15,7 +15,7 @@ Route::get('/atlos/payment/{order_id}', function ($order_id) {
         return redirect()->route('clients.invoice.index')->with('error', 'Invoice not found');
     }
     $currency = ExtensionHelper::getCurrency();
-    $total = $invoice->total();
+    $total = isset($invoice->credits) ? $invoice->credits : $invoice->total();
 
     if ($conversion_rate != -1) {
         $total = $total * $conversion_rate;
