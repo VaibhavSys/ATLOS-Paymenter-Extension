@@ -19,7 +19,7 @@ class ATLOS extends Gateway
     {
         return [
             'display_name' => 'ATLOS',
-            'version' => '1.0.0',
+            'version' => '1.0.2',
             'author' => 'Vaibhav Dhiman',
             'website' => 'https://github.com/VaibhavSys/ATLOS-Paymenter-Extension',
         ];
